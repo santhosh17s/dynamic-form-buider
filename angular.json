@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+                "src/styles.css"
             ],
             "scripts": []
           },
@@ -118,5 +118,10 @@
       }
     }
   },
-  "defaultProject": "dynamic-forms"
+  "defaultProject": "dynamic-forms",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

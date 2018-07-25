@@ -1,20 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+  <div class="container">
+    <div class="row text-center">
+        <h4 class="">Welcome to  Dynamic Forms builder! </h4>
+    </div>
+    <div class="row">
+      <div class="col-md-6 box-border">
+        <h5>Form Controls</h5>
+        <form [formGroup]="baseForm" novalidate >
+          <div class="form-group">
+            <label for="">Text</label>
+            <input type="text" name="" id="" class="form-control col-sm-6" formControlName="name">
+          </div>
+         
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="" id="" class="form-control col-sm-6" formControlName="email">
+          </div>
+          <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input col-sm-6" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+         
+          <div class="form-group">
+            <input type="button" value="Add" class="btn btn-primary" (click)="addFormControl">
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6 box-border">
+        <h5>Dynamic Form </h5>
+{{dynamicForm || json }}
+        <form [formGroup]="dynamicForm" novalidate>
+           <!--  <div *ngFor="let dyform of dynamicForm.controls; let i=index"> -->
+
+                <div >
+                    <div class="form-group">
+                        <label for="">Text</label>
+                        <input type="text" name="" id="" class="form-control col-sm-6" formControlName="name">
+                      </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="" id="" class="form-control col-sm-6" formControlName="email">
+                      </div>
+                      
+                 </div>
+            </form>       
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
 

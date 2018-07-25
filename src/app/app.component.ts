@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray} from '@angular/forms';
 
 
 
@@ -24,16 +24,20 @@ export class AppComponent implements OnInit {
        email:'santhosh@gmail.com'
      });
 
-     this.dynamicForm = this._fb.group({})
+     this.dynamicForm = this._fb.group({
+       users: this._fb.array([])
+     })
 
   }
 
+  initControls() {
+    return this._fb.group({name:'', email:''});
+  }
+
   addFormControl() {
-    //let name = <FormArray>
-    this.dynamicForm = this._fb.group({
-       name:'',
-       email:''
-    })
+    let controls = <FormArray>this.dynamicForm.controls['users'];
+    controls.push(this.initControls());
+   
   }
 
   saveForm(formValue) {

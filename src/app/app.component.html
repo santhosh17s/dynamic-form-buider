@@ -3,7 +3,12 @@
     <div class="row text-center">
         <h4 class="">Welcome to  Dynamic Forms builder! </h4>
     </div>
-    <div class="row">
+
+    <div class="app">
+      <dynamic-form [config]="config"></dynamic-form>
+    </div>
+
+    <!-- <div class="row">
       <div class="col-md-6 box-border">
         <h5>Form Controls</h5>
         <form [formGroup]="baseForm" novalidate >
@@ -31,7 +36,8 @@
         <h5>Dynamic Form </h5>
 {{dynamicForm || json }}
         <form [formGroup]="dynamicForm" novalidate>
-           <!--  <div *ngFor="let dyform of dynamicForm.controls; let i=index"> -->
+            
+          // <div *ngFor="let dyform of dynamicForm.controls; let i=index"> //
 
                 <div formArrayName="users">
                     <div class="form-group" >
@@ -47,7 +53,7 @@
             </form>       
         </div>
         
-      </div>
+      </div> -->
     </div>
 
 

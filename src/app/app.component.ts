@@ -66,5 +66,8 @@ export class AppComponent implements OnInit {
     console.log(formValue);
   }
 
+  formSubmitted(value) {
+    console.log(value);
+  }
 
 }

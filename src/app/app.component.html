@@ -5,7 +5,7 @@
     </div>
 
     <div class="app">
-      <dynamic-form [config]="config"></dynamic-form>
+      <dynamic-form [config]="config" (submitted)="formSubmitted($event)"></dynamic-form>
     </div>
 
     <!-- <div class="row">

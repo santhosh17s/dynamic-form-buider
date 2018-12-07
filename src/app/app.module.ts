@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { MealsComponent } from './meals/meals.component';
 import { SelectedMealViewerComponent } from './meals/component/selected-meal-viewer/selected-meal-viewer.component';
 import { MealSizePickerComponent } from './meals/component/meal-size-picker/meal-size-picker.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MealSizePickerComponent } from './meals/component/meal-size-picker/meal
      HomeComponent,
      MealsComponent,
      SelectedMealViewerComponent,
-     MealSizePickerComponent
+     MealSizePickerComponent,
+     StarRatingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+<nav>
+  <ul>
+    <li ><a [routerLink]="['home']"> Home </a> </li>
+    <li ><a [routerLink]="['pizza']"> Pizza </a></li>
+    <li ><a [routerLink]="['meals']"> Meals </a></li>
+  </ul>
+</nav>
+
+  <router-outlet></router-outlet>
+     
+<!--
   <div class="container">
     <div class="row text-center">
-        <!-- <h4 class="">Welcome to  Dynamic Forms builder! </h4> -->
-        <h4>Meal App</h4>
-    </div>
+        <h4 class="">Welcome to  Dynamic Forms builder! </h4> 
+        </div>
   </div>
 
-  <app-navbar></app-navbar>
-  <app-pizza-form-container></app-pizza-form-container>
-     
-
-
-    <!-- <div class="app">
+     <div class="app">
       <dynamic-form [config]="config" (submitted)="formSubmitted($event)"></dynamic-form>
     </div> -->
 

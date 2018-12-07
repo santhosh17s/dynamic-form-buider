@@ -1,0 +1,55 @@
+
+<app-selected-meal-viewer></app-selected-meal-viewer>
+
+<div class="customerDetails"  [formGroup]="group">
+  <div class="row">
+    <div class="col-md-12">
+       CUSTOMER DETAILS
+    </div>  
+  <div class="col-md-3">
+    <mat-form-field class="full-width-input">
+        <input matInput placeholder="First Name" formControlName="firstName" />
+    </mat-form-field>
+  </div>
+  <div class="col-md-3">
+      <mat-form-field class="full-width-input">
+          <input matInput placeholder="Last Name" formControlName="lastName" />
+        </mat-form-field>
+  </div>
+  <div class="col-md-3">
+      <mat-form-field class="full-width-input">
+          <input matInput placeholder="Phone Number" formControlName="phoneNumber" />
+        </mat-form-field>
+  </div>
+ </div><!-- row -->
+
+ <div class="row" [formGroup]="group.get('address')">
+   <div class="col-md-12"><h4>Delivery Address</h4></div>
+   <div class="col-md-3"> 
+     <mat-form-field class="full-width-input">
+      <input matInput placeholder="Apt. Number" formControlName="houseNum" />
+    </mat-form-field>
+  </div>
+   <div class="col-md-3">
+      <mat-form-field class="full-width-input">
+          <input matInput placeholder="City" formControlName="city" />
+        </mat-form-field>
+   </div>
+   <div class="col-md-3">
+      <mat-form-field class="full-width-input">
+          <input matInput placeholder="Floor" formControlName="floor" />
+        </mat-form-field>
+   </div>
+ </div>
+ <div class="row">
+    <div class="col-md-12">
+      <button class="pull-right" mat-raised-button color="primary" (click)="submit(form.value)">
+        SUBMIT
+      </button>
+      <button mat-raised-button color (click)="reset()">
+        RESET
+      </button>
+    </div>
+  </div>
+
+</div>

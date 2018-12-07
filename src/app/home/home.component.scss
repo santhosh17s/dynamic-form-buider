@@ -1,0 +1,44 @@
+
+.home {
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    height: 90vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+#left{
+  flex-shrink: 0;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+
+#right {
+    display: flex;
+    flex-grow: 1;
+}
+
+.scroll-content {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.left-filter {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-right:1px solid black;
+}
+
+.main-content{
+  padding: 10px 20px;
+}

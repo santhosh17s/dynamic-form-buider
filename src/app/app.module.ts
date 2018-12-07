@@ -14,6 +14,7 @@ import { MealsComponent } from './meals/meals.component';
 import { SelectedMealViewerComponent } from './meals/component/selected-meal-viewer/selected-meal-viewer.component';
 import { MealSizePickerComponent } from './meals/component/meal-size-picker/meal-size-picker.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { UrlComponent } from './url/url.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
      MealsComponent,
      SelectedMealViewerComponent,
      MealSizePickerComponent,
-     StarRatingComponent
+     StarRatingComponent,
+     UrlComponent
   ],
   imports: [
     BrowserModule,
